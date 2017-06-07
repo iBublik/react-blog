@@ -3,6 +3,7 @@ import BlogList from '../ui/BlogList';
 
 const items = [
   {
+    id: 1,
     image: {
       src: 'https://cdn.worldvectorlogo.com/logos/react.svg',
       width: 100,
@@ -12,6 +13,7 @@ const items = [
     text: 'Hello from React'
   },
   {
+    id: 2,
     image: {
       src: 'https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg',
       width: 100,
@@ -21,6 +23,7 @@ const items = [
     text: 'Hello from Ruby'
   },
   {
+    id: 3,
     image: {
       src: 'https://apm.scoutapp.com/assets/beta_invites/elixir_logo-599729344fee4048a167a3597d318185e214b8b843c04388f05aa63ad38852f9.png',
       width: 100,

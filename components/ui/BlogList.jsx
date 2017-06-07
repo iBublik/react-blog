@@ -1,14 +1,14 @@
 import React from 'react';
-import BlogItem from './BlogItem';
 import { map } from 'lodash';
+import BlogItem from './BlogItem';
 
 const BlogList = ({ items }) => (
   <div>
     {
       map(
         items,
-        (item, key) => (
-          <div key={key}>
+        (item) => (
+          <div key={item.id}>
             <BlogItem {...item}/>
           </div>
         )
