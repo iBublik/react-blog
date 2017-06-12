@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { map } from 'lodash';
 import BlogItem from './BlogItem';
 
@@ -16,5 +16,11 @@ const BlogList = ({ items }) => (
     }
   </div>
 );
+
+BlogList.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape(BlogItem.propTypes)
+  )
+};
 
 export default BlogList;
