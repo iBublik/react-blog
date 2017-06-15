@@ -1,30 +1,17 @@
-import React, { PropTypes } from 'react';
-import { bind } from 'lodash';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-class Like extends Component {
-  constructor(props) {
-    super();
-    this.state = { likesCount: props.likesCount };
-    this.handleClick = bind(this.handleClick, this);
-  }
-
-  handleClick() {
-    this.setState({ likesCount: this.state.likesCount + 1 });
-  }
-
-  render() {
-    return (
-      <div>
-        <button onClick={this.handleClick}>
-          Like! ({this.state.likesCount})
-        </button>
-      </div>
-    );
-  }
-}
+const Like = ({ likesCount, clickHandler }) => (
+  <div>
+    <button onClick={clickHandler}>
+      Like! ({likesCount})
+    </button>
+  </div>
+);
 
 Like.propTypes = {
-  likesCount: PropTypes.number
+  likesCount: PropTypes.number,
+  clickHandler: PropTypes.func.isRequired
 };
 
 Like.defaultProps = {

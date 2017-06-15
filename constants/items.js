@@ -48,8 +48,10 @@ export const items = [
   {
     id: 4,
     image: {},
+    text: 'Mistery',
     meta: {
-      createdAt: '2005-02-02T16:24:00Z'
+      createdAt: '2005-02-02T16:24:00Z',
+      likesCount: 0
     }
   }
 ];
