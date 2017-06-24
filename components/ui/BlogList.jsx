@@ -1,26 +1,25 @@
-import React, { PropTypes } from 'react';
-import { map } from 'lodash';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { map, omit } from 'lodash';
 import BlogItem from './BlogItem';
 
-const BlogList = ({ items }) => (
+const BlogList = ({ items, likesHandler }) => (
   <div>
     {
-      map(
+      _.map(
         items,
-        (item) => (
-          <div key={item.id}>
-            <BlogItem {...item}/>
-          </div>
-        )
+        (item) => <BlogItem {...item} likesHandler={likesHandler} key={item.id}/>
       )
     }
   </div>
 );
 
+const itemPropTypes = omit(BlogItem.propTypes, 'likesHandler');
 BlogList.propTypes = {
   items: PropTypes.arrayOf(
-    PropTypes.shape(BlogItem.propTypes)
-  )
+    PropTypes.shape(itemPropTypes)
+  ),
+  likesHandler: BlogItem.propTypes.likesHandler
 };
 
 export default BlogList;

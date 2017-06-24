@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Image = ({ src, width, height, alt }) => (
   <img {...{ src, width, height, alt }}/>
