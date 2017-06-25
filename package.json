@@ -1,0 +1,14 @@
+{
+  "name": "react-blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:iBublik/react-blog.git",
+  "author": "Artem Pyankov <artpyankov@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.1.0",
+    "eslint-plugin-destructuring": "^2.1.0",
+    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-react": "^7.1.0"
+  }
+}
