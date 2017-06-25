@@ -9,7 +9,7 @@ module.exports = {
     "eslint:recommended",
     "plugin:destructuring/recommended",
     "plugin:import/errors",
-    "plugin:import/warnings"
+    // "plugin:import/warnings"
   ],
   "parserOptions": {
     "ecmaVersion": 6,

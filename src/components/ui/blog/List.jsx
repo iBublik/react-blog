@@ -1,17 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { map, omit } from 'lodash';
-import BlogItem from './BlogItem';
+import { CardDeck } from 'reactstrap';
+import BlogItem from 'components/ui/blog/Item';
 
 const BlogList = ({ items, likesHandler }) => (
-  <div>
+  <CardDeck className='mt-2'>
     {
-      _.map(
+      map(
         items,
-        (item) => <BlogItem {...item} likesHandler={likesHandler} key={item.id}/>
+        (item) => (
+          <BlogItem {...item} likesHandler={likesHandler} key={item.id} />
+        )
       )
     }
-  </div>
+  </CardDeck>
 );
 
 const itemPropTypes = omit(BlogItem.propTypes, 'likesHandler');

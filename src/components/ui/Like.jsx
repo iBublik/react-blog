@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button } from 'reactstrap';
+import { FaThumbsUp } from 'react-icons/lib/fa';
 
 const Like = ({ likesCount, clickHandler }) => (
-  <div>
-    <button onClick={clickHandler}>
-      Like! ({likesCount})
-    </button>
-  </div>
+  <Button onClick={clickHandler}>
+    <FaThumbsUp />
+    {likesCount}
+  </Button>
 );
 
 Like.propTypes = {
@@ -17,3 +18,5 @@ Like.propTypes = {
 Like.defaultProps = {
   likesCount: 0
 };
+
+export default Like;
