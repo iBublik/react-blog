@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
 import c3 from 'c3';
+import { Container } from 'reactstrap';
 
 class PieChart extends Component {
   componentDidMount() {
     this.chart = c3.generate({
-      bindto: ReactDOM.findDOMNode(this.refs.chart),
+      bindto: this.chartContainer,
       data: {
         type: 'pie',
         columns: this.props.columns
@@ -26,13 +26,15 @@ class PieChart extends Component {
 
   render() {
     return (
-      <div ref='chart' />
+      <Container className='mt-3'>
+        <div ref={chartDiv => this.chartContainer = chartDiv } />
+      </Container>
     );
   }
 }
 
 PieChart.propTypes = {
   columns: PropTypes.array.isRequired
-}
+};
 
 export default PieChart;

@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { formatDate } from '../../helpers/Date';
+import { formatDate } from 'helpers/date';
 
 const BlogItemDetails = ({ author, createdAt, updatedAt }) => (
-  <div>
+  <small className='text-muted'>
     <p>Posted by {author} on {formatDate(createdAt)}</p>
     {
       updatedAt &&
       <p> (last updated on {formatDate(updatedAt)})</p>
     }
-  </div>
+  </small>
 );
 
 BlogItemDetails.propTypes = {
@@ -27,3 +27,5 @@ BlogItemDetails.propTypes = {
 BlogItemDetails.defaultProps = {
   author: 'Anonymous'
 };
+
+export default BlogItemDetails;

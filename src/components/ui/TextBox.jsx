@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { CardText } from 'reactstrap';
 
 const TextBox = ({ children }) => (
-  <span>{children}</span>
+  <CardText>{children}</CardText>
 );
 
 TextBox.propTypes = {

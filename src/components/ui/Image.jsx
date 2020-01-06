@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { CardImg } from 'reactstrap';
 
 const Image = ({ src, width, height, alt }) => (
-  <img {...{ src, width, height, alt }}/>
+  <CardImg {...{ src, width, height, alt }} top className='mt-2' />
 );
 
 Image.propTypes = {
@@ -16,6 +17,7 @@ Image.propTypes = {
   alt: PropTypes.string
 };
 
+/* eslint-disable max-len */
 Image.defaultProps = {
   src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.svg.png',
   width: 100,
